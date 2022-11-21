@@ -24,15 +24,15 @@ http.createServer(function (req, res) {
     res.end(answer);
   }
 
-  if (r === "/isholidays" && q.zone && q.date) {
-    let period = holidays[q.zone];
+  if (r === "/isholidays" && q.season && q.zone && q.date) {
+    let periods = holidays[q.season][q.zone];
     let date = q.date;
     let bool = false;
-    for (let i = 0; i < period.length; i++) {
-      if (date >= period[i].start && date <= period[i].end) {
+    periods.forEach((period) => {
+      if (parseInt(date) >= period.start && parseInt(date) <= period.end) {
         bool = true;
       }
-    }
+    })
   }
 
   if (r === '/get' && q.holidays && q.departments) {
