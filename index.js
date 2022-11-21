@@ -12,27 +12,35 @@ http.createServer(function (req, res) {
   let q = url.parse(req.url, true).query;
 
   // Holidays per season
-  if (r === '/get' && q.holidays) {
-    let answer = JSON.stringify(holidays[q.holidays]);
+  if (r === '/season' && q.holidays) {
+    let answer = JSON.stringify(holidays[q.holidays][0]);
     res.end(answer);
   }
 
   // Get departments
-  if (r === '/departments' && q.departments) {
-    let answer = JSON.stringify(departments[q.departments]);
+  if (r === '/departments') {
+    let answer = JSON.stringify(departments["departments"]);
     console.log(answer);
     res.end(answer);
   }
 
-  if (r === "/isholidays" && q.season && q.zone && q.date) {
-    let periods = holidays[q.season][q.zone];
+  // Know if a zone is in holiday at
+  // a specific date (YYYY-MM-DD) without "-" (ex: 20230101)
+  if (r === "/isholidays" && q.zone && q.date) {
+    let periods = holidays;
+    let zone = q.zone;
     let date = q.date;
     let bool = false;
-    periods.forEach((period) => {
-      if (parseInt(date) >= period.start && parseInt(date) <= period.end) {
+    let season = ""
+
+    Object.keys(periods).forEach(function(key) {
+      if(date >= parseInt(periods[key][0][zone].start.replaceAll("/","")) && date <= parseInt(periods[key][0][zone].end.replaceAll("/",""))) {
         bool = true;
+        season = key;
       }
     })
+
+    res.end(JSON.stringify(bool));
   }
 
   if (r === '/get' && q.holidays && q.departments) {
