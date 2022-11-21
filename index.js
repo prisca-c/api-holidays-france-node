@@ -17,10 +17,10 @@ http.createServer(function (req, res) {
   }
 
   // Get departments by "code_dpt" or "nom"
-  if (r === '/department' && q.departments) {
+  if (r === '/department' && q.department) {
     let getDepartments = departments["departments"];
     let answer = ""
-    let department_search = q.departments.charAt(0).toUpperCase() + q.departments.slice(1);
+    let department_search = q.department.charAt(0).toUpperCase() + q.department.slice(1);
     getDepartments.map((department) => {
       if (department.code_dpt === department_search || department.nom === department_search) {
         answer = JSON.stringify(department);
