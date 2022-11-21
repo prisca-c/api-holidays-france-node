@@ -1,0 +1,430 @@
+{
+  "departments":
+  [
+    {
+      "code": "01",
+      "nom": "Ain",
+      "zone": "A"
+    },
+    {
+      "code": "03",
+      "nom": "Allier",
+      "zone": "A"
+    },
+    {
+      "code": "07",
+      "nom": "Ardèche",
+      "zone": "A"
+    },
+    {
+      "code": "15",
+      "nom": "Cantal",
+      "zone": "A"
+    },
+    {
+      "code": "16",
+      "nom": "Charente",
+      "zone": "A"
+    },
+    {
+      "code": "17",
+      "nom": "Charente-Maritime",
+      "zone": "A"
+    },
+    {
+      "code": "19",
+      "nom": "Corrèze",
+      "zone": "A"
+    },
+    {
+      "code": "21",
+      "nom": "Côte-d'or",
+      "zone": "A"
+    },
+    {
+      "code": "23",
+      "nom": "Creuse",
+      "zone": "A"
+    },
+    {
+      "code": "24",
+      "nom": "Dordogne",
+      "zone": "A"
+    },
+    {
+      "code": "25",
+      "nom": "Doubs",
+      "zone": "A"
+    },
+    {
+      "code": "26",
+      "nom": "Drôme",
+      "zone": "A"
+    },
+    {
+      "code": "33",
+      "nom": "Gironde",
+      "zone": "A"
+    },
+    {
+      "code": "38",
+      "nom": "Isère",
+      "zone": "A"
+    },
+    {
+      "code": "39",
+      "nom": "Jura",
+      "zone": "A"
+    },
+    {
+      "code": "40",
+      "nom": "Landes",
+      "zone": "A"
+    },
+    {
+      "code": "42",
+      "nom": "Loire",
+      "zone": "A"
+    },
+    {
+      "code": "43",
+      "nom": "Haute-Loire",
+      "zone": "A"
+    },
+    {
+      "code": "47",
+      "nom": "Lot-et-Garonne",
+      "zone": "A"
+    },
+    {
+      "code": "58",
+      "nom": "Nièvre",
+      "zone": "A"
+    },
+    {
+      "code": "63",
+      "nom": "Puy-de-Dôme",
+      "zone": "A"
+    },
+    {
+      "code": "64",
+      "nom": "Pyrénées-Atlantiques",
+      "zone": "A"
+    },
+    {
+      "code": "69",
+      "nom": "Rhône",
+      "zone": "A"
+    },
+    {
+      "code": "70",
+      "nom": "Haute-Saône",
+      "zone": "A"
+    },
+    {
+      "code": "71",
+      "nom": "Saône-et-Loire",
+      "zone": "A"
+    },
+    {
+      "code": "73",
+      "nom": "Savoie",
+      "zone": "A"
+    },
+    {
+      "code": "74",
+      "nom": "Haute-Savoie",
+      "zone": "A"
+    },
+    {
+      "code": "79",
+      "nom": "Deux-Sèvres",
+      "zone": "A"
+    },
+    {
+      "code": "86",
+      "nom": "Vienne",
+      "zone": "A"
+    },
+    {
+      "code": "87",
+      "nom": "Haute-Vienne",
+      "zone": "A"
+    },
+    {
+      "code": "89",
+      "nom": "Yonne",
+      "zone": "A"
+    },
+    {
+      "code": "90",
+      "nom": "Territoire de Belfort",
+      "zone": "A"
+    },
+    {
+      "code":"01",
+      "nom": "Ain",
+      "zone":"B"
+    },
+    {
+      "code":"03",
+      "nom": "Allier",
+      "zone": "B"
+    },
+    {
+      "code":"07",
+      "nom": "Ardèche",
+      "zone": "B"
+    },
+    {
+      "code":"15",
+      "nom": "Cantal",
+      "zone": "B"
+    },
+    {
+      "code":"16",
+      "nom": "Charente",
+      "zone": "B"
+    },
+    {
+      "code":"17",
+      "nom": "Charente-Maritime",
+      "zone": "B"
+    },
+    {
+      "code":"19",
+      "nom": "Corrèze",
+      "zone": "B"
+    },
+    {
+      "code":"21",
+      "nom": "Côte-d'or",
+      "zone": "B"
+    },
+    {
+      "code":"23",
+      "nom": "Creuse",
+      "zone": "B"
+    },
+    {
+      "code":"24",
+      "nom": "Dordogne",
+      "zone": "B"
+    },
+    {
+      "code":"25",
+      "nom": "Doubs",
+      "zone": "B"
+    },
+    {
+      "code":"26",
+      "nom": "Drôme",
+      "zone": "B"
+    },
+    {
+      "code":"33",
+      "nom": "Gironde",
+      "zone": "B"
+    },
+    {
+      "code":"38",
+      "nom": "Isère",
+      "zone": "B"
+    },
+    {
+      "code":"39",
+      "nom": "Jura",
+      "zone": "B"
+    },
+    {
+      "code":"40",
+      "nom": "Landes",
+      "zone": "B"
+    },
+    {
+      "code":"42",
+      "nom": "Loire",
+      "zone": "B"
+    },
+    {
+      "code":"43",
+      "nom": "Haute-Loire",
+      "zone": "B"
+    },
+    {
+      "code":"47",
+      "nom": "Lot-et-Garonne",
+      "zone": "B"
+    },
+    {
+      "code":"58",
+      "nom": "Nièvre",
+      "zone": "B"
+    },
+    {
+      "code":"63",
+      "nom": "Puy-de-Dôme",
+      "zone": "B"
+    },
+    {
+      "code":"64",
+      "nom": "Pyrénées-Atlantiques",
+      "zone": "B"
+    },
+    {
+      "code":"69",
+      "nom": "Rhône",
+      "zone": "B"
+    },
+    {
+      "code":"70",
+      "nom": "Haute-Saône",
+      "zone": "B"
+    },
+    {
+      "code":"71",
+      "nom": "Saône-et-Loire",
+      "zone": "B"
+    },
+    {
+      "code":"73",
+      "nom": "Savoie",
+      "zone": "B"
+    },
+    {
+      "code":"74",
+      "nom": "Haute-Savoie",
+      "zone": "B"
+    },
+    {
+      "code":"79",
+      "nom": "Deux-Sèvres",
+      "zone": "B"
+    },
+    {
+      "code":"86",
+      "nom": "Vienne",
+      "zone": "B"
+    },
+    {
+      "code":"87",
+      "nom": "Haute-Vienne",
+      "zone": "B"
+    },
+    {
+      "code":"89",
+      "nom": "Yonne",
+      "zone": "B"
+    },
+    {
+      "code":"90",
+      "nom": "Territoire de Belfort",
+      "zone": "B"
+    },
+    {
+      "code": "09",
+      "nom": "Ariège",
+      "zone": "C"
+    },
+    {
+      "code": "11",
+      "nom": "Aude",
+      "zone":  "C"
+    },
+    {
+      "code": "12",
+      "nom": "Aveyron",
+      "zone":  "C"
+    },
+    {
+      "code": "30",
+      "nom": "Gard",
+      "zone":  "C"
+    },
+    {
+      "code": "31",
+      "nom": "Haute-Garonne",
+      "zone":  "C"
+    },
+    {
+      "code": "32",
+      "nom": "Gers",
+      "zone":  "C"
+    },
+    {
+      "code": "34",
+      "nom": "Hérault",
+      "zone":  "C"
+    },
+    {
+      "code": "46",
+      "nom": "Lot",
+      "zone":  "C"
+    },
+    {
+      "code": "48",
+      "nom": "Lozère",
+      "zone":  "C"
+    },
+    {
+      "code": "65",
+      "nom": "Hautes-Pyrénées",
+      "zone":  "C"
+    },
+    {
+      "code": "66",
+      "nom": "Pyrénées-Orientales",
+      "zone":  "C"
+    },
+    {
+      "code": "75",
+      "nom": "Paris",
+      "zone":  "C"
+    },
+    {
+      "code": "77",
+      "nom": "Seine-et-Marne",
+      "zone":  "C"
+    },
+    {
+      "code": "78",
+      "nom": "Yvelines",
+      "zone":  "C"
+    },
+    {
+      "code": "81",
+      "nom": "Tarn",
+      "zone":  "C"
+    },
+    {
+      "code": "82",
+      "nom": "Tarn-et-Garonne",
+      "zone":  "C"
+    },
+    {
+      "code": "91",
+      "nom": "Essonne",
+      "zone":  "C"
+    },
+    {
+      "code": "92",
+      "nom": "Hauts-de-Seine",
+      "zone":  "C"
+    },
+    {
+      "code": "93",
+      "nom": "Seine-Saint-Denis",
+      "zone":  "C"
+    },
+    {
+      "code": "94",
+      "nom": "Val-de-Marne",
+      "zone":  "C"
+    },
+    {
+      "code": "95",
+      "nom": "Val-d'Oise",
+      "zone":  "C"
+    }
+  ]
+}
