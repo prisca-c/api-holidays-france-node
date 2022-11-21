@@ -1,5 +1,4 @@
 var http = require('http');
-const fs = require('fs');
 var url = require('url');
 var holidays = require('./data/holidays2023.json')
 var departments = require('./data/departments.json')
@@ -17,10 +16,16 @@ http.createServer(function (req, res) {
     res.end(answer);
   }
 
-  // Get departments
-  if (r === '/departments') {
-    let answer = JSON.stringify(departments["departments"]);
-    console.log(answer);
+  // Get departments by "code_dpt" or "nom"
+  if (r === '/department' && q.departments) {
+    let getDepartments = departments["departments"];
+    let answer = ""
+    let department_search = q.departments.charAt(0).toUpperCase() + q.departments.slice(1);
+    getDepartments.map((department) => {
+      if (department.code_dpt === department_search || department.nom === department_search) {
+        answer = JSON.stringify(department);
+      }
+    })
     res.end(answer);
   }
 
