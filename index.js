@@ -19,18 +19,25 @@ http.createServer(function (req, res) {
   // Get departments by "code_dpt" or "nom"
   if (r === '/department' && q.department) {
     let getDepartments = departments["departments"];
-    let answer = ""
-    let department_search = q.department.charAt(0).toUpperCase() + q.department.slice(1);
+    let result = []
+    let dpts = ""
+    let answer = []
+    let department_search = q.department.toLowerCase();
+    let periods = holidays;
     getDepartments.map((department) => {
-      if (department.code_dpt === department_search || department.nom === department_search) {
-        answer = JSON.stringify(department);
+      if (department.code_dpt === department_search || department.nom.toLowerCase() === department_search) {
+        dpts = JSON.stringify(department);
+        Object.keys(periods).map((key) => {
+          result.push({[key]:periods[key][0][department.zone]})
+        })
       }
     })
+    answer = dpts + JSON.stringify(result)
     res.end(answer);
   }
 
   // Know if a zone is in holiday at
-  // a specific date (YYYY-MM-DD) without "-" (ex: 20230101)
+  // a specific zone & date (YYYY-MM-DD) without "-" (ex: 20230101)
   if (r === "/isholidays" && q.zone && q.date) {
     let periods = holidays;
     let zone = q.zone;
@@ -39,7 +46,10 @@ http.createServer(function (req, res) {
     let season = ""
 
     Object.keys(periods).forEach(function(key) {
-      if(date >= parseInt(periods[key][0][zone].start.replaceAll("/","")) && date <= parseInt(periods[key][0][zone].end.replaceAll("/",""))) {
+      if(
+        date >= parseInt(periods[key][0][zone].start.replaceAll("/","")) &&
+        date <= parseInt(periods[key][0][zone].end.replaceAll("/","")))
+      {
         bool = true;
         season = key;
       }
@@ -48,6 +58,40 @@ http.createServer(function (req, res) {
     res.end(JSON.stringify(bool));
   }
 
-  if (r === '/get' && q.holidays && q.departments) {
+  // Know if a department is in holiday at
+  // a specific date (YYYY-MM-DD) without "-" (ex: 20230101)
+  if (r === '/isholidays' && q.department) {
+    let periods = holidays;
+    let getDepartments = departments["departments"];
+    const date = new Date();
+
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let today = parseInt(year + "" + month + "" + day);
+    console.log(today)
+    let answer = ""
+    let bool = false;
+    let department_search = q.department.toLowerCase();
+    getDepartments.map((department) => {
+      if (department.code_dpt === department_search || department.nom.toLowerCase() === department_search) {
+        answer = JSON.stringify(department);
+        Object.keys(periods).forEach(key => {
+          Object.keys(periods[key][0]).forEach(zone => {
+            if (zone === department.zone) {
+              //answer = JSON.stringify(periods[key][0][zone]);
+              if(
+                today >= parseInt(periods[key][0][zone].start.replaceAll("/","")) &&
+                today <= parseInt(periods[key][0][zone].end.replaceAll("/",""))
+              )
+              {
+                bool = true;
+              }
+            }
+          })
+        })
+      }
+    })
+    res.end(JSON.stringify(bool));
   }
 }).listen(8080); //the server object listens on port 8080
