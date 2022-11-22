@@ -68,8 +68,8 @@ http.createServer(function (req, res) {
     let day = date.getDate();
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
-    let today = parseInt(year + "" + month + "" + day);
-    console.log(today)
+    let getdate = q.date === "today" ? parseInt(year + "" + month + "" + day) : q.date
+    console.log(getdate)
     let answer = ""
     let bool = false;
     let department_search = q.department.toLowerCase();
@@ -81,8 +81,8 @@ http.createServer(function (req, res) {
             if (zone === department.zone) {
               //answer = JSON.stringify(periods[key][0][zone]);
               if(
-                today >= parseInt(periods[key][0][zone].start.replaceAll("/","")) &&
-                today <= parseInt(periods[key][0][zone].end.replaceAll("/",""))
+                getdate >= parseInt(periods[key][0][zone].start.replaceAll("/","")) &&
+                getdate <= parseInt(periods[key][0][zone].end.replaceAll("/",""))
               )
               {
                 bool = true;
